@@ -110,9 +110,11 @@
 const inner = document.querySelector(".inner")
 const word = document.querySelector(".word");
 const button = document.querySelector(".btn");
+const button2 = document.querySelector(".btn2");
 
 window.onload = function() {
     // inner.classList.replace("fadeOut","fadeIn")
     word.classList.replace("fadeOut","fadeIn")
     button.classList.replace("fadeOut","fadeIn")
+    button2.classList.replace("fadeOut","fadeIn")
 } 

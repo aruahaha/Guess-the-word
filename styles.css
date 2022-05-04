@@ -42,6 +42,10 @@
     transition: all 0.3s ease 1s;
 }
 
+.btn2 {
+    transition: all 0.3s ease 1s;
+}
+
 /* CSS */
 .button-57 {
     position: relative;
@@ -162,17 +166,20 @@
 }
 
 .button-53 {
-    opacity: 0;
+    /* opacity: 0; */
+    visibility: hidden;
     pointer-events: none;
 }
 
 @media only screen and (max-width: 600px) {
     .button-57 {
-        opacity: 0;
+        /* opacity: 0; */
+        visibility: hidden;
         pointer-events: none;
     }
 
     .button-53 {
+        visibility: visible;
         opacity: 1;
         pointer-events: all;
         position: relative;
