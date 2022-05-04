@@ -29,7 +29,7 @@
     margin-right: auto;
     width: fit-content;
     text-align: center;
-    /* transition: all 0.3s ease 1s; */
+    transition: all 0.3s ease 1s;
 }
 
 .word {
@@ -190,10 +190,9 @@
         color: #5B7DB1;
     }
 
-    * {
+    body {
         background-color: #C4DDFF;
     }
-
 
     .middle {
         display: table-cell;
@@ -213,4 +212,9 @@
 .fadeOut{
     opacity: 0;
     pointer-events: none;
+}
+
+.play-area {
+    text-align: center;
+    transition: all 0.3s ease 1.5s;
 }

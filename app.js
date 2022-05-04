@@ -111,6 +111,7 @@ const inner = document.querySelector(".inner")
 const word = document.querySelector(".word");
 const button = document.querySelector(".btn");
 const button2 = document.querySelector(".btn2");
+const playArea = document.querySelector(".play-area");
 
 window.onload = function() {
     // inner.classList.replace("fadeOut","fadeIn")
@@ -118,3 +119,13 @@ window.onload = function() {
     button.classList.replace("fadeOut","fadeIn")
     button2.classList.replace("fadeOut","fadeIn")
 } 
+
+button.onclick = () => {
+    inner.classList.add("fadeOut");
+    playArea.classList.replace("fadeOut", "fadeIn");
+}
+
+button2.onclick = () => {
+    inner.classList.add("fadeOut");
+    playArea.classList.replace("fadeOut", "fadeIn");
+}
