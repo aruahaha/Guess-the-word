@@ -1,3 +1,9 @@
+const inner = document.querySelector(".inner")
+
+window.onload = function() {
+    inner.classList.replace("fadeOut","fadeIn")
+} 
+
 function wordGenerator() {
     let wordArr = [
         "cloistered",

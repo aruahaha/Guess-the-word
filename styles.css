@@ -2,8 +2,8 @@
     margin: 0;
     padding: 0;
     font-family: 'Oleo Script Swash Caps', cursive;
-
 }
+
 
 .outer {
     display: table;
@@ -12,11 +12,16 @@
     left: 0;
     height: 100%;
     width: 100%;
+
 }
 
 .middle {
     display: table-cell;
     vertical-align: middle;
+    border: 15px solid black;
+    padding: 20px;
+    width: 200px;
+    height: 150px;
 }
 
 .inner {
@@ -24,6 +29,7 @@
     margin-right: auto;
     width: fit-content;
     text-align: center;
+    transition: all 0.3s ease 0.6s;
 }
 
 .word {
@@ -168,11 +174,32 @@
         position: relative;
         bottom: 50px;
     }
-    .word{
+
+    .word {
         color: #5B7DB1;
     }
 
-    *{
+    * {
         background-color: #C4DDFF;
     }
+
+
+    .middle {
+        display: table-cell;
+        vertical-align: middle;
+        border: 0;
+        padding: 0px;
+        width: 0px;
+        height: 0px;
+    }
+}
+
+div.fadeIn {
+    opacity: 1;
+    pointer-events: all;
+}
+
+div.fadeOut{
+    opacity: 0;
+    pointer-events: none;
 }
