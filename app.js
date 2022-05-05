@@ -137,6 +137,10 @@ const head = document.querySelector(".heading");
 const guess = document.querySelector(".guessWord");
 const subBtn = document.querySelector(".sub");
 const subBtn2 = document.querySelector(".sub2");
+const point = document.querySelector(".points");
+const chance = document.querySelector(".count");
+const pointSec = document.querySelector(".point-section");
+const countSec = document.querySelector(".count-section");
 
 window.onload = function () {
     word.classList.replace("fadeOut", "fadeIn")
@@ -145,40 +149,55 @@ window.onload = function () {
 }
 
 button.onclick = () => {
-    button.classList.replace("fadeIn" , "fadeOut")
+    button.classList.replace("fadeIn", "fadeOut")
     inner.classList.add("fadeOut");
     playArea.classList.replace("fadeOut", "fadeIn");
     head.classList.add("animation");
     answer.classList.replace("fadeOut", "fadeIn")
     guess.classList.replace("fadeOut", "fadeIn")
-    subBtn.classList.replace("fadeOut" , "fadeIn")
+    subBtn.classList.replace("fadeOut", "fadeIn")
+    pointSec.classList.replace("fadeOut", "fadeIn");
+    countSec.classList.replace("fadeOut", "fadeIn");
     guess.innerHTML = wordGenerator();
 }
 
 button2.onclick = () => {
-    button2.classList.replace("fadeIn" , "fadeOut")
+    button2.classList.replace("fadeIn", "fadeOut")
     inner.classList.add("fadeOut");
     playArea.classList.replace("fadeOut", "fadeIn");
     head.classList.add("animation");
     answer.classList.replace("fadeOut", "fadeIn")
     guess.classList.replace("fadeOut", "fadeIn")
-    subBtn2.classList.replace("fadeOut" , "fadeIn")
+    subBtn2.classList.replace("fadeOut", "fadeIn")
     guess.innerHTML = wordGenerator();
 }
+
+let count = 5;
+let points = 0;
+
+point.innerHTML = points;
+chance.innerHTML = count;
 
 function submitBtnCode() {
     if (answer.value.toLowerCase().trim() == str.toLowerCase()) {
         guess.innerHTML = str
-        setTimeout ( () => {
+        setTimeout(() => {
             guess.innerHTML = wordGenerator();
             answer.value = ""
-        } , 1500)
-    }
-    else {
+            count = 5;
+            chance.innerHTML = count;
+        }, 1500)
+        count--;
+        points = points + count;
+        chance.innerHTML = count;
+        point.innerHTML = points;
+    } else {
         guess.classList.add("shake")
-        setTimeout ( () => {
+        setTimeout(() => {
             guess.classList.remove("shake")
-        } , 400)
+        }, 400)
+        count--;
+        chance.innerHTML = count;
     }
 }
 
@@ -186,24 +205,12 @@ subBtn.onclick = () => {
     submitBtnCode();
 }
 
-document.addEventListener("keypress", function(e) {
-    if(e.key === "Enter") {
+document.addEventListener("keypress", function (e) {
+    if (e.key === "Enter") {
         submitBtnCode();
     }
 });
 
 subBtn2.onclick = () => {
-    if (answer.value.toLowerCase().trim() == str.toLowerCase()) {
-        guess.innerHTML = str
-        setTimeout ( () => {
-            guess.innerHTML = wordGenerator();
-            answer.value = ""
-        } , 1500)
-    }
-    else {
-        guess.classList.add("shake")
-        setTimeout ( () => {
-            guess.classList.remove("shake")
-        } , 400)
-    }
+    submitBtnCode();
 }

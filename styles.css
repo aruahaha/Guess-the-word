@@ -310,3 +310,16 @@
     z-index: 1;
     transition: all 0.3s ease 4s;
 }
+
+.point-section {
+    position: relative;
+    left: 520px;
+    transition: all 0.3s ease 4s;
+}
+
+.count-section {
+    position: relative;
+    top: 271px;
+    right: 191px;
+    transition: all 0.3s ease 4s;
+}
