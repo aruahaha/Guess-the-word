@@ -203,8 +203,12 @@
         height: 0px;
     }
 
-    .sub{
+    .sub2 {
+        position: relative;
+        top: 290px;
         right: 5px;
+        z-index: 1;
+        transition: all 0.3s ease 4s;
     }
 }
 
@@ -246,6 +250,36 @@
     }
 }
 
+.shake {
+    animation: shake 0.3s ease 0.2s;
+}
+
+@keyframes shake {
+    0% {
+        transform: translate(0);
+    }
+
+    20% {
+        transform: translate(2em);
+    }
+
+    40% {
+        transform: translate(-2em);
+    }
+
+    60% {
+        transform: translate(2em);
+    }
+
+    80% {
+        transform: translate(-2em);
+    }
+
+    100% {
+        transform: translate(0);
+    }
+}
+
 .answer {
     transition: all 0.3s ease 4s;
     position: relative;
@@ -260,14 +294,14 @@
     display: grid;
 }
 
-.guessWord{
+.guessWord {
     position: relative;
     top: 150px;
     transition: all 0.3s ease 4s;
     font-family: 'Courier New', Courier, monospace !important;
 }
 
-.sub{
+.sub {
     position: relative;
     top: 290px;
     z-index: 1;

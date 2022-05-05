@@ -136,6 +136,7 @@ const answer = document.querySelector(".answer");
 const head = document.querySelector(".heading");
 const guess = document.querySelector(".guessWord");
 const subBtn = document.querySelector(".sub");
+const subBtn2 = document.querySelector(".sub2");
 
 window.onload = function () {
     word.classList.replace("fadeOut", "fadeIn")
@@ -159,12 +160,30 @@ button2.onclick = () => {
     head.classList.add("animation");
     answer.classList.replace("fadeOut", "fadeIn")
     guess.classList.replace("fadeOut", "fadeIn")
-    subBtn.classList.replace("fadeOut" , "fadeIn")
+    subBtn2.classList.replace("fadeOut" , "fadeIn")
     guess.innerHTML = wordGenerator();
 }
 
 subBtn.onclick = () => {
-    if (answer.value === str) {
+    if (answer.value.toLowerCase() == str.toLowerCase()) {
         guess.innerHTML = str
+    }
+    else {
+        guess.classList.add("shake")
+        setTimeout ( () => {
+            guess.classList.remove("shake")
+        } , 400)
+    }
+}
+
+subBtn2.onclick = () => {
+    if (answer.value.toLowerCase() == str.toLowerCase()) {
+        guess.innerHTML = str
+    }
+    else {
+        guess.classList.add("shake")
+        setTimeout ( () => {
+            guess.classList.remove("shake")
+        } , 400)
     }
 }
