@@ -166,8 +166,7 @@ button2.onclick = () => {
     guess.innerHTML = wordGenerator();
 }
 
-
-subBtn.onclick = () => {
+function submitBtnCode() {
     if (answer.value.toLowerCase().trim() == str.toLowerCase()) {
         guess.innerHTML = str
         setTimeout ( () => {
@@ -182,6 +181,16 @@ subBtn.onclick = () => {
         } , 400)
     }
 }
+
+subBtn.onclick = () => {
+    submitBtnCode();
+}
+
+document.addEventListener("keypress", function(e) {
+    if(e.key === "Enter") {
+        submitBtnCode();
+    }
+});
 
 subBtn2.onclick = () => {
     if (answer.value.toLowerCase().trim() == str.toLowerCase()) {
