@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -190,9 +192,9 @@
         color: #5B7DB1;
     }
 
-    body {
+    /* body {
         background-color: #C4DDFF;
-    }
+    } */
 
     .middle {
         display: table-cell;
@@ -292,6 +294,7 @@
     border-radius: 20px;
     font-size: 30px;
     display: grid;
+    font-family: 'Noto Sans', sans-serif;
 }
 
 .guessWord {

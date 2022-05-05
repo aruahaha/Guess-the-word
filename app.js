@@ -145,6 +145,7 @@ window.onload = function () {
 }
 
 button.onclick = () => {
+    button.classList.replace("fadeIn" , "fadeOut")
     inner.classList.add("fadeOut");
     playArea.classList.replace("fadeOut", "fadeIn");
     head.classList.add("animation");
@@ -155,6 +156,7 @@ button.onclick = () => {
 }
 
 button2.onclick = () => {
+    button2.classList.replace("fadeIn" , "fadeOut")
     inner.classList.add("fadeOut");
     playArea.classList.replace("fadeOut", "fadeIn");
     head.classList.add("animation");
@@ -164,9 +166,14 @@ button2.onclick = () => {
     guess.innerHTML = wordGenerator();
 }
 
+
 subBtn.onclick = () => {
-    if (answer.value.toLowerCase() == str.toLowerCase()) {
+    if (answer.value.toLowerCase().trim() == str.toLowerCase()) {
         guess.innerHTML = str
+        setTimeout ( () => {
+            guess.innerHTML = wordGenerator();
+            answer.value = ""
+        } , 1500)
     }
     else {
         guess.classList.add("shake")
@@ -177,8 +184,12 @@ subBtn.onclick = () => {
 }
 
 subBtn2.onclick = () => {
-    if (answer.value.toLowerCase() == str.toLowerCase()) {
+    if (answer.value.toLowerCase().trim() == str.toLowerCase()) {
         guess.innerHTML = str
+        setTimeout ( () => {
+            guess.innerHTML = wordGenerator();
+            answer.value = ""
+        } , 1500)
     }
     else {
         guess.classList.add("shake")
