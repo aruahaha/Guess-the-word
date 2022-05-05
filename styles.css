@@ -212,6 +212,11 @@
         z-index: 1;
         transition: all 0.3s ease 4s;
     }
+
+    .section {
+        position: relative;
+        top: 15px !important;
+    }
 }
 
 .fadeIn {
@@ -311,6 +316,8 @@
     transition: all 0.3s ease 4s;
 }
 .section {
+    position: relative;
+    top: 50px;
     display: grid;
     grid-template-columns: auto auto;
 }

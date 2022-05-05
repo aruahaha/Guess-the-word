@@ -169,6 +169,8 @@ button2.onclick = () => {
     answer.classList.replace("fadeOut", "fadeIn")
     guess.classList.replace("fadeOut", "fadeIn")
     subBtn2.classList.replace("fadeOut", "fadeIn")
+    pointSec.classList.replace("fadeOut", "fadeIn");
+    countSec.classList.replace("fadeOut", "fadeIn");
     guess.innerHTML = wordGenerator();
 }
 
