@@ -203,6 +203,9 @@
         height: 0px;
     }
 
+    .sub{
+        right: 5px;
+    }
 }
 
 .fadeIn {
@@ -254,6 +257,7 @@
     height: 80px;
     border-radius: 20px;
     font-size: 30px;
+    display: grid;
 }
 
 .guessWord{
@@ -264,8 +268,8 @@
 }
 
 .sub{
-    right: 5px;
     position: relative;
     top: 290px;
     z-index: 1;
+    transition: all 0.3s ease 4s;
 }

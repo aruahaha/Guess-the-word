@@ -1,4 +1,5 @@
 var str;
+
 function wordGenerator() {
     let wordArr = [
         "cloistered",
@@ -107,7 +108,7 @@ function wordGenerator() {
     var arr = str.split("");
     let n = Math.floor(str.length / 2);
     for (let i = 0; i <= n; i++) {
-        let randNum = Math.round(Math.random() * str.length-1);
+        let randNum = Math.round(Math.random() * str.length - 1);
         arr[randNum] = "-";
     }
     var ans = arr.join("");
@@ -124,7 +125,6 @@ const answer = document.querySelector(".answer");
 const head = document.querySelector(".heading");
 const guess = document.querySelector(".guessWord");
 const subBtn = document.querySelector(".sub");
-const output = document.querySelector(".Output");
 
 window.onload = function () {
     word.classList.replace("fadeOut", "fadeIn")
@@ -138,6 +138,7 @@ button.onclick = () => {
     head.classList.add("animation");
     answer.classList.replace("fadeOut", "fadeIn")
     guess.classList.replace("fadeOut", "fadeIn")
+    subBtn.classList.replace("fadeOut" , "fadeIn")
     guess.innerHTML = wordGenerator();
 }
 
@@ -147,13 +148,12 @@ button2.onclick = () => {
     head.classList.add("animation");
     answer.classList.replace("fadeOut", "fadeIn")
     guess.classList.replace("fadeOut", "fadeIn")
+    subBtn.classList.replace("fadeOut" , "fadeIn")
     guess.innerHTML = wordGenerator();
 }
 
 subBtn.onclick = () => {
     if (answer.value === str) {
-        output.innerHTML = "adhbudh"
-    } else {
-        output.innerHTML = "fok u"
+        guess.innerHTML = str
     }
 }
