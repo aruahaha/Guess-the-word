@@ -259,12 +259,13 @@
 .guessWord{
     position: relative;
     top: 150px;
-    transition: all 0.3s ease 4.5s;
+    transition: all 0.3s ease 4s;
     font-family: 'Courier New', Courier, monospace !important;
 }
 
-/* .sub{
+.sub{
     right: 5px;
     position: relative;
     top: 290px;
-} */
+    z-index: 1;
+}

@@ -1,3 +1,4 @@
+var str;
 function wordGenerator() {
     let wordArr = [
         "cloistered",
@@ -102,13 +103,16 @@ function wordGenerator() {
         "swim"
     ];
     let radNum = Math.floor(Math.random() * 101);
-    let str = wordArr[radNum]
-    var arr = str.split(''); 
-    var random = Number(Math.floor(Math.random()*5))
-    var a = "-".repeat(random)
-    arr.splice(1 , random , a)
-    var ans = arr.join("")
-    return ans
+    str = wordArr[radNum];
+    var arr = str.split("");
+    let n = Math.round(str.length / 2);
+    for (let i = 0; i <= n; i++) {
+        let randNum = Math.round(Math.random() * str.length-1);
+        arr[randNum] = "-";
+    }
+    var ans = arr.join("");
+
+    return ans;
 }
 
 const inner = document.querySelector(".inner")
@@ -116,9 +120,11 @@ const word = document.querySelector(".word");
 const button = document.querySelector(".btn");
 const button2 = document.querySelector(".btn2");
 const playArea = document.querySelector(".play-area");
-const answer = document.querySelector(".answer")
-const head = document.querySelector(".heading")
-const guess = document.querySelector(".guessWord")
+const answer = document.querySelector(".answer");
+const answer2 = document.querySelector(".answer").value;
+const head = document.querySelector(".heading");
+const guess = document.querySelector(".guessWord");
+const subBtn = document.querySelector(".sub");
 
 window.onload = function () {
     // inner.classList.replace("fadeOut","fadeIn")
@@ -143,4 +149,12 @@ button2.onclick = () => {
     answer.classList.replace("fadeOut", "fadeIn")
     guess.classList.replace("fadeOut", "fadeIn")
     guess.innerHTML = wordGenerator();
+    subBtn.onclick = () => {
+        console.log(answer2.innerHTML)
+        // if (answer2 == str) {
+        //     console.log("please");
+        // } else {
+        //     console.log("nahi")
+        // }
+    }
 }
