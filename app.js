@@ -105,13 +105,13 @@ function wordGenerator() {
     let radNum = Math.floor(Math.random() * 101);
     str = wordArr[radNum];
     var arr = str.split("");
-    let n = Math.round(str.length / 2);
+    let n = Math.floor(str.length / 2);
     for (let i = 0; i <= n; i++) {
         let randNum = Math.round(Math.random() * str.length-1);
         arr[randNum] = "-";
     }
     var ans = arr.join("");
-
+    console.log(str);
     return ans;
 }
 
@@ -121,13 +121,12 @@ const button = document.querySelector(".btn");
 const button2 = document.querySelector(".btn2");
 const playArea = document.querySelector(".play-area");
 const answer = document.querySelector(".answer");
-const answer2 = document.querySelector(".answer").value;
 const head = document.querySelector(".heading");
 const guess = document.querySelector(".guessWord");
 const subBtn = document.querySelector(".sub");
+const output = document.querySelector(".Output");
 
 window.onload = function () {
-    // inner.classList.replace("fadeOut","fadeIn")
     word.classList.replace("fadeOut", "fadeIn")
     button.classList.replace("fadeOut", "fadeIn")
     button2.classList.replace("fadeOut", "fadeIn")
@@ -149,12 +148,12 @@ button2.onclick = () => {
     answer.classList.replace("fadeOut", "fadeIn")
     guess.classList.replace("fadeOut", "fadeIn")
     guess.innerHTML = wordGenerator();
-    subBtn.onclick = () => {
-        console.log(answer2.innerHTML)
-        // if (answer2 == str) {
-        //     console.log("please");
-        // } else {
-        //     console.log("nahi")
-        // }
+}
+
+subBtn.onclick = () => {
+    if (answer.value === str) {
+        output.innerHTML = "adhbudh"
+    } else {
+        output.innerHTML = "fok u"
     }
 }
