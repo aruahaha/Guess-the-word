@@ -203,9 +203,6 @@
         height: 0px;
     }
 
-    .play-area {
-        top: 280px !important;
-    }
 }
 
 .fadeIn {
@@ -213,7 +210,7 @@
     pointer-events: all;
 }
 
-.fadeOut{
+.fadeOut {
     opacity: 0;
     pointer-events: none;
 }
@@ -224,6 +221,50 @@
     margin-left: auto;
     margin-right: auto;
     width: fit-content;
+    /* position: relative;
+    top: 260px; */
+    z-index: 99;
+}
+
+.animation {
     position: relative;
     top: 260px;
+    animation: move 2s ease 2s forwards;
 }
+
+
+@keyframes move {
+    from {
+        top: 260px;
+    }
+
+    to {
+        top: 40px;
+    }
+}
+
+.answer {
+    transition: all 0.3s ease 4s;
+    position: relative;
+    top: 260px;
+    z-index: 1;
+    text-align: center;
+    border: 2px solid black;
+    width: 200px;
+    height: 80px;
+    border-radius: 20px;
+    font-size: 30px;
+}
+
+.guessWord{
+    position: relative;
+    top: 150px;
+    transition: all 0.3s ease 4.5s;
+    font-family: 'Courier New', Courier, monospace !important;
+}
+
+/* .sub{
+    right: 5px;
+    position: relative;
+    top: 290px;
+} */
