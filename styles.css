@@ -212,6 +212,28 @@
         z-index: 1;
         transition: all 0.3s ease 4s;
     }
+
+    .section {
+        display: grid;
+        grid-template-columns: auto auto;
+        position: relative;
+        padding: 20px;
+        top: 15px;
+    }
+
+    .point-section {
+        transition: all 0.3s ease 4s;
+        text-align: center;
+        border: 2px solid black;
+        border-radius:10px ;
+    }
+    
+    .count-section {
+        transition: all 0.3s ease 4s;
+        text-align: center;
+        border: 2px solid black;
+        border-radius:10px ;
+    }
 }
 
 .fadeIn {
@@ -313,14 +335,18 @@
 .section {
     display: grid;
     grid-template-columns: auto auto;
+    position: relative;
+    top: 10px;
 }
 
 .point-section {
     transition: all 0.3s ease 4s;
     text-align: center;
+    border: 2px solid black;
 }
 
 .count-section {
     transition: all 0.3s ease 4s;
     text-align: center;
+    border: 2px solid black;
 }
