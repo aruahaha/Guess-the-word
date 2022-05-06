@@ -127,7 +127,7 @@ function wordGenerator() {
     return ans;
 }
 
-const inner = document.querySelector(".inner")
+const inner = document.querySelector(".inner");
 const word = document.querySelector(".word");
 const button = document.querySelector(".btn");
 const button2 = document.querySelector(".btn2");
