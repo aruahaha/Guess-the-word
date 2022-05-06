@@ -14,7 +14,7 @@ function wordGenerator() {
         "SilverSurfer",
         "Gambit",
         "Cyclops",
-        "Mr.Fantastic",
+        "MrFantastic",
         "Nightcrawler",
         "NickFury",
         "HumanTorch",
@@ -141,6 +141,9 @@ const point = document.querySelector(".points");
 const chance = document.querySelector(".count");
 const pointSec = document.querySelector(".point-section");
 const countSec = document.querySelector(".count-section");
+const sec = document.querySelector(".section");
+const finalPoint = document.querySelector(".final-point");
+const finalSec = document.querySelector(".final-section");
 
 window.onload = function () {
     word.classList.replace("fadeOut", "fadeIn")
@@ -185,11 +188,11 @@ function submitBtnCode() {
         guess.innerHTML = str
         setTimeout(() => {
             guess.innerHTML = wordGenerator();
-            answer.value = ""
+            answer.value = "";
             count = 5;
             chance.innerHTML = count;
         }, 1500)
-        points = points + count;
+        points += 5;
         chance.innerHTML = count;
         point.innerHTML = points;
     } else {
@@ -199,6 +202,13 @@ function submitBtnCode() {
         }, 400)
         count--;
         chance.innerHTML = count;
+    }
+
+    if (count === 0) {
+        playArea.classList.replace("fadeIn", "fadeOut");
+        sec.classList.add("fadeOut");
+        finalSec.classList.replace("fadeOut", "fadeIn");
+        finalPoint.innerHTML = points;
     }
 }
 

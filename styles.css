@@ -234,6 +234,13 @@
         border: 2px solid black;
         border-radius:10px ;
     }
+
+    .final-section {
+        text-align: center;
+        position: relative;
+        bottom: 35px;
+        transition: all 0.3s ease 1.5s;
+    }
 }
 
 .fadeIn {
@@ -337,6 +344,7 @@
     grid-template-columns: auto auto;
     position: relative;
     top: 10px;
+    transition: all 0.3s ease 1s;
 }
 
 .point-section {
@@ -349,4 +357,9 @@
     transition: all 0.3s ease 4s;
     text-align: center;
     border: 2px solid black;
+}
+
+.final-section {
+    text-align: center;
+    transition: all 0.3s ease 1.5s;
 }
